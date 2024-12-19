@@ -16,6 +16,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import FastImage from '@d11/react-native-fast-image/src';
 
 import {
   Colors,
@@ -76,6 +77,12 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <FastImage
+            blurRadius={16}
+            style={{ width: 200, height: 200, alignSelf: 'center' }}
+            resizeMode="contain"
+            source={{ uri: 'https://cdn.prod.website-files.com/6470768de8327f36a7ae11a5/64e5de11811d72e03bc71dbd_react-native.png'}}
+          />
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
